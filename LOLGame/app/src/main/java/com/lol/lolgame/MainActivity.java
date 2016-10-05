@@ -140,7 +140,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 e.printStackTrace();
             }
         }
-        Log.i("xiaoming", "1223");
         fragmentTransaction.commit();
     }
 
