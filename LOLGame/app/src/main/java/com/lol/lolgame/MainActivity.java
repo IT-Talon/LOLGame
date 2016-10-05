@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private void initActionBar() {
         actionBar = getSupportActionBar();
         if (actionBar != null) {
-            View view = LayoutInflater.from(this).inflate(R.layout.actionbar,null);
+            View view = LayoutInflater.from(this).inflate(R.layout.actionbar, null);
             actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
             actionBar.setCustomView(view);
             ActionBar.LayoutParams layoutParams = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT,
@@ -139,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 e.printStackTrace();
             }
         }
+        Log.i("xiaoming", "1223");
         fragmentTransaction.commit();
     }
 
