@@ -1,13 +1,12 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerView_commFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2F323A"
+    android:orientation="vertical"
+    android:padding="5dp"
     tools:context="com.lol.lolgame.fragment.CommFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="CommFragment" />
 
-</FrameLayout>
+</android.support.v7.widget.RecyclerView>

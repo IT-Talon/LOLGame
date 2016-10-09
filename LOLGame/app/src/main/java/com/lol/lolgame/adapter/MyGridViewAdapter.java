@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.lol.lolgame.Bean.VideoBean;
 import com.lol.lolgame.R;
 import com.lol.lolgame.utils.ImageLoader;
+import com.lol.lolgame.view.MyImageView;
 
 import java.util.List;
 
@@ -50,7 +51,7 @@ public class MyGridViewAdapter extends BaseAdapter {
         if (convertView == null) {
             viewHolder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.item_gridview_funfragment, parent, false);
-            viewHolder.imageView = (ImageView) convertView.findViewById(R.id.img_item);
+            viewHolder.imageView = (MyImageView) convertView.findViewById(R.id.img_item);
             viewHolder.textView = (TextView) convertView.findViewById(R.id.textView_item);
             convertView.setTag(viewHolder);
         } else {
@@ -63,7 +64,7 @@ public class MyGridViewAdapter extends BaseAdapter {
     }
 
     private static class ViewHolder {
-        ImageView imageView;
+        MyImageView imageView;
         TextView textView;
     }
 }

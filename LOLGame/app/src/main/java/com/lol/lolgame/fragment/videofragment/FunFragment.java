@@ -31,6 +31,10 @@ public class FunFragment extends Fragment {
     private MyGridView mGridView;
     private List<VideoBean> beanList;
 
+    public FunFragment setBeanList(List<VideoBean> beanList) {
+        this.beanList = beanList;
+        return this;
+    }
 
     public FunFragment() {
         // Required empty public constructor
@@ -43,13 +47,13 @@ public class FunFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_fun, container, false);
         initView(view);
+        mGridView.setAdapter(new MyGridViewAdapter(getContext(), beanList));
         return view;
-
     }
 
     private void initView(View view) {
         mGridView = (MyGridView) view.findViewById(R.id.gridView_FunFragment);
-        getData();
+//        getData();
 
     }
 
